@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Correct API Endpoints
-ASK_API_URL = "http://18.217.194.58:8088/ask"
+ASK_API_URL = "http://18.119.127.210:8088/ask"
 GOOGLE_API_URL = "https://9phsnnogsi.execute-api.us-east-1.amazonaws.com/default/Google"
 
 def initialize_session_state():
