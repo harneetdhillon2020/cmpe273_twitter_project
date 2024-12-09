@@ -1,0 +1,10 @@
+pg8000
+requests
+uvicorn
+fastapi
+langchain
+langchain-chroma
+langchain-cohere
+langchain-community
+langchain-core
+pymongo

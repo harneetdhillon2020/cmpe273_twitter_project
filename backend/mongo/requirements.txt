@@ -1,0 +1,6 @@
+pg8000
+requests
+uvicorn
+fastapi
+tweepy
+pymongo

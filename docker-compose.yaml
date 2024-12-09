@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  mongo:
+    build:
+      context: ./backend/mongo
+    environment:
+      - MONGO_CONNECTION_STR=mongodb+srv://ryantan:qls38Xi4DBnUoC0L@cluster0.chtms.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 
+      - TWEEPY_CLIENT=AAAAAAAAAAAAAAAAAAAAAAojxAEAAAAAX4R89BKl5rqDMzgoxrY6RTM9pf0%3DtKV9m3i33C3hDkgxVGrZAgGESbpy1swQ5ukNqkkPLZv6WswXLd
+    ports:
+      - 8087:8087
+ 
+  llm:
+    build:
+      context: ./backend/llm
+
+    environment:
+      - LANGCHAIN_TRACING_V2=true
+      - LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+      - LANGCHAIN_API_KEY=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
+      - LANGCHAIN_PROJECT=pr-somber-candle-58
+      - COHERE_API_KEY=qmBma7C63Z5BMVdZgr7zIRYPiLBonQ683bHFU77M
+      - MONGO_CONNECTION_STR=mongodb+srv://ryantan:qls38Xi4DBnUoC0L@cluster0.chtms.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    ports:
+      - 8088:8088
